@@ -105,7 +105,8 @@ const reasons = [
   { id: 97, emoji: "🦦", text: "Porque eres mi alegría constante." },
   { id: 98, emoji: "🦔", text: "Porque eres mi ternura diaria." },
   { id: 99, emoji: "🦉", text: "Porque eres mi secreto mejor guardado." },
-  { id: 100, emoji: "💖", text: "Porque simplemente eres tú, y eso basta para amarte por siempre." },
+  { id: 100, emoji: "💖", text: "Porque simplemente eres tú, y eso basta para amarte por siempre." }
+];
 
 function App() {
   return (
