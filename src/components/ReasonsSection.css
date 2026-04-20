@@ -28,7 +28,9 @@
 }
 
 .reason-item.is-visible {
-  animation: cascadeIn 0.55s var(--delay) forwards;
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
 }
 
 .reason-item:hover {

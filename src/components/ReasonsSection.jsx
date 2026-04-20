@@ -29,10 +29,10 @@ function ReasonsSection({ reasons }) {
       <h2>Por que te amo, mi princesa</h2>
 
       <div className="reasons-grid">
-        {reasons.map((reason, index) => (
+        {reasons.map((reason) => (
           <article
             className={`reason-item ${visible ? "is-visible" : ""}`}
-            style={{ "--delay": `${index * 100}ms` }}
+            style={{}}
             key={reason.id}
           >
             <span className="emoji" aria-hidden="true">
