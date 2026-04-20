@@ -1,0 +1,74 @@
+.counter-section {
+  margin-top: 1.2rem;
+  padding: 5.4rem 1rem 3rem;
+  border-radius: var(--radius);
+  background-color: #ffe9f2;
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 25c-4.6-3.5-8-6.4-8-10.5C6 11 8.3 9 11 9c1.5 0 2.8.7 3.7 1.9C15.5 9.7 16.9 9 18.4 9 21 9 23 11 23 14.4c0 4.2-3.4 7-9 10.6h-.1z' fill='%23ff6b9d' fill-opacity='0.14'/%3E%3C/svg%3E");
+  box-shadow: var(--shadow);
+}
+
+.counter-section h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 1.7rem;
+  font-style: italic;
+  color: var(--color-dark);
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(110px, 1fr));
+  gap: 0.9rem;
+}
+
+.counter-card {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(255, 23, 68, 0.12);
+}
+
+.counter-value {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-secondary);
+  animation: rollIn 0.48s ease;
+}
+
+.counter-card span {
+  text-transform: lowercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: rgba(45, 27, 46, 0.75);
+}
+
+@keyframes rollIn {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .counter-grid {
+    grid-template-columns: repeat(3, minmax(110px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-section {
+    padding-top: 4.8rem;
+  }
+
+  .counter-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+}

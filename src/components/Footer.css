@@ -1,0 +1,33 @@
+.romantic-footer {
+  margin-top: 1.6rem;
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, #9f1f5f, #5d1738);
+  text-align: center;
+  color: #fff8fd;
+  padding: 2rem 1rem;
+}
+
+.romantic-footer p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+.romantic-footer p span {
+  display: inline-block;
+  animation: footerPulse 1.1s ease-in-out infinite;
+}
+
+.romantic-footer small {
+  display: block;
+  margin-top: 0.4rem;
+  letter-spacing: 0.09em;
+}
+
+@keyframes footerPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.22);
+  }
+}

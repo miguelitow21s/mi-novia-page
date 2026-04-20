@@ -1,0 +1,103 @@
+.letter-section {
+  margin-top: 1.8rem;
+  border-radius: var(--radius);
+  padding: 4.8rem 0.7rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(170deg, #160d1f, #26122a 45%, #1a1228);
+}
+
+.stars,
+.stars::before,
+.stars::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.85) 1px, transparent 1px);
+  background-size: 38px 38px;
+  animation: twinkle 5.6s linear infinite;
+  pointer-events: none;
+}
+
+.stars::before {
+  background-size: 62px 62px;
+  opacity: 0.5;
+  animation-duration: 7.2s;
+}
+
+.stars::after {
+  background-size: 78px 78px;
+  opacity: 0.28;
+  animation-duration: 9.4s;
+}
+
+.letter-paper {
+  width: min(760px, calc(100% - 0.8rem));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background:
+    linear-gradient(to bottom, rgba(255, 253, 244, 0.96), rgba(255, 248, 233, 0.95)),
+    repeating-linear-gradient(0deg, rgba(88, 66, 40, 0.03), rgba(88, 66, 40, 0.03) 1px, transparent 1px, transparent 3px);
+  border: 1px solid rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.2), 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.letter-paper h2 {
+  text-align: center;
+  color: var(--color-gold);
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  margin-bottom: 1rem;
+}
+
+.letter-paper pre {
+  white-space: pre-wrap;
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+  color: #392b2a;
+  min-height: 380px;
+}
+
+.final-heart {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 0.8rem;
+  animation: pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+@media (max-width: 480px) {
+  .letter-section {
+    padding: 3.8rem 0.2rem;
+  }
+
+  .letter-paper {
+    padding: 1rem;
+  }
+
+  .letter-paper pre {
+    min-height: 360px;
+  }
+}

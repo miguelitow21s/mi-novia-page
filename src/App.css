@@ -1,0 +1,69 @@
+@import "./components/HeroSection.css";
+@import "./components/CounterSection.css";
+@import "./components/GallerySection.css";
+@import "./components/ReasonsSection.css";
+@import "./components/LoveLetterSection.css";
+@import "./components/Footer.css";
+
+.app {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.main-nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  width: min(760px, calc(100% - 1.2rem));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.main-nav a {
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  transition: var(--transition);
+}
+
+.main-nav a:hover {
+  color: white;
+  background: linear-gradient(120deg, var(--color-primary), var(--color-secondary));
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: min(1200px, calc(100% - 1rem));
+  }
+
+  .main-nav {
+    top: 8px;
+    gap: 0.25rem;
+  }
+
+  .main-nav a {
+    font-size: 0.74rem;
+    padding: 0.34rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    width: calc(100% - 0.7rem);
+    justify-content: space-between;
+  }
+}
