@@ -22,15 +22,16 @@
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
   padding: 1rem;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 1 !important;
+  transform: none !important;
+  display: block !important;
 }
 
 .reason-item.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: none;
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  display: block !important;
 }
 
 .reason-item:hover {
